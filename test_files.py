@@ -57,3 +57,5 @@ def test_read_csv_():
 
 
 # Удаляем папку
+def test_remove_folder():
+    shutil.rmtree('resources')
