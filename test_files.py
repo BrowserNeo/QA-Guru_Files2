@@ -10,11 +10,7 @@ os.mkdir('resources')
 zip_file = zipfile.ZipFile('resources\Архив содержимого.zip', 'w')
 
 
-# Добавляем файлы в архив
-def test_zip_files():
-    for filename in os.listdir('folder'):
-        zip_file.write(os.path.join('folder', filename), compress_type=zipfile.ZIP_DEFLATED)
-    zip_file.close()
+
 
 
 # Проверка файлов
