@@ -23,8 +23,11 @@ def test_check_files():
 
     zip_file.close()
 
-
-
+# Разархивируем файл
+def test_unzip_files():
+    zip_file = zipfile.ZipFile('resources\Архив содержимого.zip')
+    zip_file.extractall('resources/')
+    zip_file.close()
 
 
 # Проверка pdf
@@ -49,12 +52,6 @@ def test_read_csv_():
         reader = csv.reader(f)
         headers = next(reader)
     assert 'First_name' in str(headers)
-
-# Разархивируем файл
-def test_unzip_files():
-    zip_file = zipfile.ZipFile('resources\Архив содержимого.zip')
-    zip_file.extractall('resources/')
-    zip_file.close()
 
 
 # Удаляем папку
